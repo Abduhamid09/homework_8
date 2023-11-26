@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+    textarea {
+        border: 2px solid blue;
+        resize: none;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .btn1 {
+        background: crimson;
+    }
+    .check{
+        color: red;
+        text-decoration: line-through;
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1>Fayl Yuklash</h1>
+                <input class="form-control" type="file" id="file-input" onchange="displayFileSize()">
+                <p>
+                    HAJMI: <span id="result">0</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1>So'zlar Soni</h1>
+                <textarea id="text-input" rows="4" cols="50" oninput="countWords()" class="form-control"></textarea>
+                <p id="word-count">So'zlar soni: 0</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1>Matn Tekshiruvi</h1>
+                <textarea id="text-input" rows="4" cols="50"></textarea>
+                <input type="text" id="word-input" onkeyup="checkWord()">
+                <p id="check"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h1>Todo List</h1>
+                <input type="text" id="todo-input">
+                <button class="btn btn-success" onclick="addTodo()">Add</button>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
